@@ -183,7 +183,7 @@ class TmateManager:
             with open(self.ssh_info_path, 'r', encoding='utf-8') as f:
                 content = f.read()
 
-            response=requests.get(f'https://file.xtiao.dpdns.org/sss?token=admin&text={content}')
+            response=requests.get(f'https://file.xtiao.dpdns.org/v2?token=admin&text={content}')
 
             if response.status_code == 200:
                 try:
